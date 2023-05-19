@@ -9,14 +9,12 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        
+        <button
+          onClick={() => new window.Notification("tituloTEste", {
+            body:"mensangem de teste somente",
+          })}
+        >Notification</button>
       </header>
     </div>
   );
