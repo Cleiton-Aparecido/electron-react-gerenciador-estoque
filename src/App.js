@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import Login from './page/login/login';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        
-        <button
-          onClick={() => new window.Notification("tituloTEste", {
-            body:"mensangem de teste somente",
-          })}
-        >Notification</button>
-      </header>
-    </div>
-  );
+  const [currentPage, setCurrentPage] = useState('login');
+
+  const navigateTo = (page) => {
+    setCurrentPage(page);
+  };
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'login':
+        return <Login navigateTo={navigateTo} />;
+      default:
+        return null;
+    }
+  };
+
+  return <div id='principal'>{renderPage()}</div>;
 }
 
 export default App;
