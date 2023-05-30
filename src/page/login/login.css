@@ -21,6 +21,12 @@ div.TelaLogin{
     justify-content: space-around;
 }
 
+.form-group{
+    width: 70%;
+    height: 90%;
+    
+}
+
 div.Formularios{
     width: 100%;
     height: 100%;
@@ -38,4 +44,7 @@ div.Formularios div .menulogin{
 div.Formularios div .menulogin input{
     border-radius: 100px;
 }
-
+.Botao-login{
+    margin-top: 20px;
+    text-align: center;
+}
